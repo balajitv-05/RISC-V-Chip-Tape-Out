@@ -12,7 +12,8 @@ Detailed instructions for installing the required tools can be found here:
 ### TOOLS Installation:
 
 Yosys
-``` $ sudo apt-get update
+```
+ $ sudo apt-get update
 $ git clone https://github.com/YosysHQ/yosys.git
 $ cd yosys
 $ sudo apt install make               # If make is not installed
@@ -28,12 +29,14 @@ $ sudo make install
 ``` 
 
 iVerilog
-``` $ sudo apt-get update
+```
+$ sudo apt-get update
 $ sudo apt-get install iverilog
 ```
 
 gtkwave
-``` $ sudo apt-get update
+```
+ $ sudo apt-get update
 $ sudo apt install gtkwave
 ```
 
