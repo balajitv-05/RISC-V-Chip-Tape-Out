@@ -99,7 +99,6 @@ sudo make install
 ![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/138ea9011e08e6114ccb666fc29554148dae0a75/week_0/Task0/SnapShots/qrouter.png)
 
 ngspice
-
    After downloading the tarball from (https://sourceforge.net/projects/ngspice/files/) to a local
 directory, unpack it using:
 ```
