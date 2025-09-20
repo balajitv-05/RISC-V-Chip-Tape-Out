@@ -29,6 +29,7 @@ $ sudo make install
 ```
 ![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/138ea9011e08e6114ccb666fc29554148dae0a75/week_0/Task0/SnapShots/yosys.png)
 
+
 iVerilog
 ```
 $ sudo apt-get update
@@ -36,12 +37,14 @@ $ sudo apt-get install iverilog
 ```
 ![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/2733dc6b103ebd58d343755518e0fb45434faf1a/week_0/Task0/SnapShots/iverilog.png)
 
+
 gtkwave
 ```
 $ sudo apt-get update
 $ sudo apt install gtkwave
 ```
 ![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/138ea9011e08e6114ccb666fc29554148dae0a75/week_0/Task0/SnapShots/gtkwave.png)
+
 
 magic
 ```
@@ -61,6 +64,7 @@ make install
 ```
 ![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/138ea9011e08e6114ccb666fc29554148dae0a75/week_0/Task0/SnapShots/magic.png)
 
+
 netgen
 ```
 tar -xvzf netgen-1.5.134.tgz
@@ -72,6 +76,7 @@ sudo make
 sudo make install
 ```
 ![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/138ea9011e08e6114ccb666fc29554148dae0a75/week_0/Task0/SnapShots/magictkcon.png)
+
 
 OpenSTA
 
@@ -98,6 +103,7 @@ sudo make install
 ```
 ![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/f8ce2567753ea8ad116d9a615e97254b8c4c2e58/week_0/Task0/SnapShots/qrouter.png)
 
+
 ngspice
   * After downloading the tarball from (https://sourceforge.net/projects/ngspice/files/) to a local directory, unpack it using tar command.
   * Make sure you have the gcc/clang in your Ubuntu distribution to configure the ngspice.
@@ -113,5 +119,18 @@ $ sudo make install
 ![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/f8ce2567753ea8ad116d9a615e97254b8c4c2e58/week_0/Task0/SnapShots/ngspice.png)
 
 
-
-
+qflow
+```
+tar -xvzf qflow-1.3.17.tgz
+cd qflow-1.3.17
+#git clone git://opencircuitdesign.com/qflow-1.3 
+#cd qflow-1.3/
+sudo ./configure 
+sudo make
+sudo make install
+sudo apt-get install autoconf --assume-yes
+sudo apt-get install automake --assume-yes
+sudo apt-get install libtool --assume-yes
+sudo apt-get install swig --assume-yes
+```
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/9ddabc2e7c58f3d290a77cdf8e325993c18ceaf4/week_0/Task0/SnapShots/qflow.png)
