@@ -99,11 +99,11 @@ sudo make install
 ![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/f8ce2567753ea8ad116d9a615e97254b8c4c2e58/week_0/Task0/SnapShots/qrouter.png)
 
 ngspice
-  * After downloading the tarball from (https://sourceforge.net/projects/ngspice/files/) to a local
-directory, unpack it using:
+  * After downloading the tarball from (https://sourceforge.net/projects/ngspice/files/) to a local directory, unpack it using tar command.
+  * Make sure you have the gcc/clang in your Ubuntu distribution to configure the ngspice.
 ```
-$ tar -zxvf ngspice-37.tar.gz
-$ cd ngspice-37
+$ tar -zxvf ngspice-45.2.tar.gz
+$ cd ngspice-45.2
 $ mkdir release
 $ cd release
 $ ../configure --with-x --with-readline=yes --disable-debug
