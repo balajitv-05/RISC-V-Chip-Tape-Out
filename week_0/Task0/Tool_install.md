@@ -24,15 +24,18 @@ $ make config-gcc
 # Yosys build depends on a Git submodule called abc, which hasn't been initialized yet. You need to run the following command before running make
 $ git submodule update --init --recursive
 $ make 
-$ sudo make install ``` 
+$ sudo make install
+``` 
 
 iVerilog
 ``` $ sudo apt-get update
-$ sudo apt-get install iverilog ```
+$ sudo apt-get install iverilog
+```
 
 gtkwave
 ``` $ sudo apt-get update
-$ sudo apt install gtkwave ```
+$ sudo apt install gtkwave
+```
 
 
 
