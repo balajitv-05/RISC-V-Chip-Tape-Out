@@ -26,13 +26,15 @@ $ make config-gcc
 $ git submodule update --init --recursive
 $ make 
 $ sudo make install
-``` 
+```
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/138ea9011e08e6114ccb666fc29554148dae0a75/week_0/Task0/SnapShots/yosys.png)
 
 iVerilog
 ```
 $ sudo apt-get update
 $ sudo apt-get install iverilog
 ```
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/2733dc6b103ebd58d343755518e0fb45434faf1a/week_0/Task0/SnapShots/iverilog.png)
 
 gtkwave
 ```
@@ -40,6 +42,7 @@ gtkwave
 $ sudo apt install gtkwave
 ```
 ![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/138ea9011e08e6114ccb666fc29554148dae0a75/week_0/Task0/SnapShots/gtkwave.png)
+
 magic
 ```
 $ sudo apt-get install m4
@@ -56,6 +59,60 @@ cd magic
 make
 make install 
 ```
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/138ea9011e08e6114ccb666fc29554148dae0a75/week_0/Task0/SnapShots/magic.png)
+
+netgen
+```
+tar -xvzf netgen-1.5.134.tgz
+cd netgen-1.5.134
+#git clone git://opencircuitdesign.com/netgen-1.5 
+#cd netgen-1.5/
+sudo ./configure 
+sudo make
+sudo make install
+```
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/138ea9011e08e6114ccb666fc29554148dae0a75/week_0/Task0/SnapShots/magictkcon.png)
+
+OpenSTA
+
+```
+git clone https://github.com/The-OpenROAD-Project/OpenSTA.git
+cd OpenSTA
+mkdir build
+cd build
+cmake ..
+make
+```
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/138ea9011e08e6114ccb666fc29554148dae0a75/week_0/Task0/SnapShots/opensta.png)
+
+
+qrouter
+```
+tar -xvzf qrouter-1.4.59.tgz
+cd qrouter-1.4.59
+#git clone git://opencircuitdesign.com/qrouter-1.4 
+#cd qrouter-1.4/
+sudo ./configure 
+sudo make
+sudo make install
+```
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/138ea9011e08e6114ccb666fc29554148dae0a75/week_0/Task0/SnapShots/qrouter.png)
+
+ngspice
+
+   After downloading the tarball from (https://sourceforge.net/projects/ngspice/files/) to a local
+directory, unpack it using:
+```
+$ tar -zxvf ngspice-37.tar.gz
+$ cd ngspice-37
+$ mkdir release
+$ cd release
+$ ../configure --with-x --with-readline=yes --disable-debug
+$ make
+$ sudo make install
+```
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/138ea9011e08e6114ccb666fc29554148dae0a75/week_0/Task0/SnapShots/ngspice.png)
+
 
 
 
