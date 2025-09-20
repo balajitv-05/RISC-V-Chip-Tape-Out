@@ -39,7 +39,7 @@ gtkwave
  $ sudo apt-get update
 $ sudo apt install gtkwave
 ```
-![Alt text for the image](week_0/Task0/SnapShots/gtkwave.png)
+![image](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/main/week_0/Task0/SnapShots/gtkwave.png)
 magic
 ```
 $ sudo apt-get install m4
