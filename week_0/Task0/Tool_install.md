@@ -3,10 +3,10 @@
 Detailed instructions for installing the required tools can be found here:
 
 ### System Requirements
-  RAM : 6 GB RAM
-  ROM : 50 GB HDD
-  Distribution version : Ubuntu 20.04 or Higher
-  Virtual CPU : 4vCPU
+  * RAM : 6 GB RAM
+  * ROM : 50 GB HDD
+  * Distribution version : Ubuntu 20.04 or Higher
+  * Virtual CPU : 4vCPU
 
 
 ### TOOLS Installation:
@@ -39,7 +39,7 @@ gtkwave
  $ sudo apt-get update
 $ sudo apt install gtkwave
 ```
-![image](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/main/week_0/Task0/SnapShots/gtkwave.png)
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/138ea9011e08e6114ccb666fc29554148dae0a75/week_0/Task0/SnapShots/gtkwave.png)
 magic
 ```
 $ sudo apt-get install m4
