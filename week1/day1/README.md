@@ -23,7 +23,7 @@ This repository documents the learning flow and lab exercises based on Verilog R
      ```
      $ iverilog file_name.v tb_file_name.v 
      ```
-     ![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/2733dc6b103ebd58d343755518e0fb45434faf1a/week_0/Task0/SnapShots/iverilog_day1.png)
+     ![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/4f24667eb2147b709e61affee214a4cde9aba849/week1/day1/SnapShots/iverilog_day1.png)
    - Analyzing waveforms with gtkwave
      ```
      $ gtkwave file_name.vcd
@@ -80,8 +80,8 @@ This repository documents the learning flow and lab exercises based on Verilog R
     - Gate-level netlist visualization
    ![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/4f24667eb2147b709e61affee214a4cde9aba849/week1/day1/SnapShots/netlist.png) 
     - Analyzing design with Sky130 cells
-    - Simulation of synthesized netlist  
-    - Validating functionality with testbench  
+    - Simulation of synthesized netlist - Using iverilog 
+    - Validating functionality with testbench - Testbench used is same as the previous testbench which is written for RTL.
 
 ---
 
