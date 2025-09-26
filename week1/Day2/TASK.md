@@ -15,7 +15,7 @@ A **flat design** approach is chosen when the design is sufficiently small for t
 -----
 
 ## Design of Multiple Modules
-![Alt Text]("https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/8c1e116626392f981e4428e73b14b6ca8ce4a5af/week1/Day2/Day2_images/multiple_modules.png")
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/8c1e116626392f981e4428e73b14b6ca8ce4a5af/week1/Day2/Day2_images/multiple_modules.png)
 ### Hierarchical Flow
 
 This approach is used to preserve the design hierarchy.
@@ -33,7 +33,7 @@ synth -top multiple_modules
 abc -liberty ~/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 write_verilog -noattr multiple_modules.v
 ```
-![Alt Text]("https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/8c1e116626392f981e4428e73b14b6ca8ce4a5af/week1/Day2/Day2_images/multi_modules_show.png")
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/8c1e116626392f981e4428e73b14b6ca8ce4a5af/week1/Day2/Day2_images/multi_modules_show.png)
 ### Flattened Flow
 
 **Commands:**
@@ -43,7 +43,7 @@ write_verilog -noattr multiple_modules.v
 flatten
 write_verilog -noattr multiple_modules_flat.v
 ```
-![Alt Text]("https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/96952dc0fbad1bf553974392ee25dc6db54f559d/week1/Day2/Day2_images/multi_modules_flatten_net.png")
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/96952dc0fbad1bf553974392ee25dc6db54f559d/week1/Day2/Day2_images/multi_modules_flatten_net.png)
 
 -----
 
@@ -63,7 +63,7 @@ endmodule
 ```
 
 This flip-flop captures the input `d` on the rising edge of the clock, unless the asynchronous reset is activated. In the `dff_asyncres` module, the asynchronous reset has higher priority than the clock. `async_reset` is checked first, so if it is high (1), it immediately resets `q` to 0.
-![Alt Text]("https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/8c1e116626392f981e4428e73b14b6ca8ce4a5af/week1/Day2/Day2_images/sim_dff_asyncres.png")
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/8c1e116626392f981e4428e73b14b6ca8ce4a5af/week1/Day2/Day2_images/sim_dff_asyncres.png)
 
 **Synthesis Commands:**
 
@@ -76,7 +76,7 @@ dfflibmap -liberty ~/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt
 abc -liberty ~/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 show
 ```
-![Alt Text]("https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/8c1e116626392f981e4428e73b14b6ca8ce4a5af/week1/Day2/Day2_images/asyncres_show.png")
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/8c1e116626392f981e4428e73b14b6ca8ce4a5af/week1/Day2/Day2_images/asyncres_show.png)
 ### D Flip-Flop with Async Set
 ```verilog
 module dff_async_set ( input clk ,  input async_set , input d , output reg q );
@@ -90,7 +90,7 @@ end
 endmodule
 ```
 This flip-flop captures input `d` on the rising edge of the clock, unless the asynchronous set is active. The flip-flop responds to either the positive edge of `clk` or `async_set`. If `async_set` is high, the output `q` is immediately set to 1, regardless of the clock.
-![Alt Text]("https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/8c1e116626392f981e4428e73b14b6ca8ce4a5af/week1/Day2/Day2_images/asyncset.png")
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/8c1e116626392f981e4428e73b14b6ca8ce4a5af/week1/Day2/Day2_images/asyncset.png)
 
 **Synthesis Commands:**
 
@@ -103,7 +103,7 @@ dfflibmap -liberty ~/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt
 abc -liberty ~/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 show
 ```
-![Alt Text]("https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/8c1e116626392f981e4428e73b14b6ca8ce4a5af/week1/Day2/Day2_images/dff_async_set_show.png")
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/8c1e116626392f981e4428e73b14b6ca8ce4a5af/week1/Day2/Day2_images/dff_async_set_show.png)
 ### D Flip-Flop with Sync Reset
 ```verilog
 module dff_syncres ( input clk , input async_reset , input sync_reset , input d , output reg q );
@@ -117,7 +117,7 @@ end
 endmodule 
 ```
 This flip-flop captures the value of `d` on the rising edge of the clock, unless the synchronous reset is active. The `always` block triggers only on the rising edge of the clock. If `sync_reset` is high at the time of the clock edge, the output `q` is set to 0.
-![Alt Text]("https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/8c1e116626392f981e4428e73b14b6ca8ce4a5af/week1/Day2/Day2_images/syncres.png")
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/8c1e116626392f981e4428e73b14b6ca8ce4a5af/week1/Day2/Day2_images/syncres.png)
 **Synthesis Commands:**
 
 ```bash
@@ -129,8 +129,8 @@ dfflibmap -liberty ~/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt
 abc -liberty ~/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 show
 ```
-![Alt Text]("https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/8c1e116626392f981e4428e73b14b6ca8ce4a5af/week1/Day2/Day2_images/syncres_syn.png")
-![Alt Text]("https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/748c805ee0a40d58fa0188be84f527a079615fc8/week1/Day2/Day2_images/syncres_show.png")
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/8c1e116626392f981e4428e73b14b6ca8ce4a5af/week1/Day2/Day2_images/syncres_syn.png)
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/748c805ee0a40d58fa0188be84f527a079615fc8/week1/Day2/Day2_images/syncres_show.png)
 **Note on Commands:**
 
   * `abc -liberty <.lib file path>`: This command is used for technology mapping of Yosys’s internal gate library to a target architecture.
@@ -159,8 +159,8 @@ synth -top mult_2
 abc -liberty ~/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 write_verilog -noattr mult_2_net.v
 ```
-![Alt Text]("https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/748c805ee0a40d58fa0188be84f527a079615fc8/week1/Day2/Day2_images/mul2.png")
-![Alt Text]("https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/748c805ee0a40d58fa0188be84f527a079615fc8/week1/Day2/Day2_images/mul2_net.png")
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/748c805ee0a40d58fa0188be84f527a079615fc8/week1/Day2/Day2_images/mul2.png)
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/748c805ee0a40d58fa0188be84f527a079615fc8/week1/Day2/Day2_images/mul2_net.png)
 ### Part 2 - Synthesis of mult8
 ```verilog
 module mult8 (input [2:0] a , output [5:0] y);
@@ -168,7 +168,7 @@ module mult8 (input [2:0] a , output [5:0] y);
 endmodule
 ```
 **Commands:**
-![Alt Text]("https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/748c805ee0a40d58fa0188be84f527a079615fc8/week1/Day2/Day2_images/mult8_syn.png)
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/748c805ee0a40d58fa0188be84f527a079615fc8/week1/Day2/Day2_images/mult8_syn.png)
 ```bash
 yosys
 read_liberty -lib ~/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
@@ -177,7 +177,7 @@ synth -top mult8
 abc -liberty ~/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 write_verilog -noattr mult_8_net.v
 ```
-![Alt Text]("https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/748c805ee0a40d58fa0188be84f527a079615fc8/week1/Day2/Day2_images/mult8.png)
-![Alt Text]("https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/748c805ee0a40d58fa0188be84f527a079615fc8/week1/Day2/Day2_images/mul8_net.png)
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/748c805ee0a40d58fa0188be84f527a079615fc8/week1/Day2/Day2_images/mult8.png)
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/748c805ee0a40d58fa0188be84f527a079615fc8/week1/Day2/Day2_images/mul8_net.png)
 
 
