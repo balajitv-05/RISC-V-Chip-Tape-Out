@@ -15,7 +15,7 @@ A **flat design** approach is chosen when the design is sufficiently small for t
 -----
 
 ## Design of Multiple Modules
-![Alt Text]()
+![Alt Text]("week1/Day2/Day2_images/multiple_modules.png")
 ### Hierarchical Flow
 
 This approach is used to preserve the design hierarchy.
@@ -33,7 +33,7 @@ synth -top multiple_modules
 abc -liberty ~/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 write_verilog -noattr multiple_modules.v
 ```
-![Alt Text]()
+![Alt Text]("week1/Day2/Day2_images/multi_modules_show.png")
 ### Flattened Flow
 
 **Commands:**
@@ -43,15 +43,28 @@ write_verilog -noattr multiple_modules.v
 flatten
 write_verilog -noattr multiple_modules_flat.v
 ```
-![Alt Text]()
+![Alt Text]("week1/Day2/Day2_images/multi_modules_flatten_net.png")
+
 -----
 
 ## Efficient Flop Coding Styles
 
 ### D Flip-Flop with Async Reset
-![Alt Text]()
+```verilog
+module dff_asyncres ( input clk ,  input async_reset , input d , output reg q );
+always @ (posedge clk , posedge async_reset)
+begin
+	if(async_reset)
+		q <= 1'b0;
+	else	
+		q <= d;
+end
+endmodule
+```
+
 This flip-flop captures the input `d` on the rising edge of the clock, unless the asynchronous reset is activated. In the `dff_asyncres` module, the asynchronous reset has higher priority than the clock. `async_reset` is checked first, so if it is high (1), it immediately resets `q` to 0.
-![Alt Text]()
+![Alt Text]("week1/Day2/Day2_images/sim_dff_asyncres.png")
+
 **Synthesis Commands:**
 
 ```bash
@@ -63,11 +76,22 @@ dfflibmap -liberty ~/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt
 abc -liberty ~/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 show
 ```
-![Alt Text]()
+![Alt Text]("week1/Day2/Day2_images/sim_dff_asyncres_show.png")
 ### D Flip-Flop with Async Set
-![Alt Text]()
+```verilog
+module dff_async_set ( input clk ,  input async_set , input d , output reg q );
+always @ (posedge clk , posedge async_set)
+begin
+	if(async_set)
+		q <= 1'b1;
+	else	
+		q <= d;
+end
+endmodule
+```
 This flip-flop captures input `d` on the rising edge of the clock, unless the asynchronous set is active. The flip-flop responds to either the positive edge of `clk` or `async_set`. If `async_set` is high, the output `q` is immediately set to 1, regardless of the clock.
-![Alt Text]()
+![Alt Text]("week1/Day2/Day2_images/asyncset.png")
+
 **Synthesis Commands:**
 
 ```bash
@@ -79,12 +103,21 @@ dfflibmap -liberty ~/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt
 abc -liberty ~/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 show
 ```
-![Alt Text]()
+![Alt Text]("week1/Day2/Day2_images/dff_asyncset_show.png")
 ### D Flip-Flop with Sync Reset
-
-![Alt Text]()
+```verilog
+module dff_syncres ( input clk , input async_reset , input sync_reset , input d , output reg q );
+always @ (posedge clk )
+begin
+	if (sync_reset)
+		q <= 1'b0;
+	else	
+		q <= d;
+end
+endmodule 
+```
 This flip-flop captures the value of `d` on the rising edge of the clock, unless the synchronous reset is active. The `always` block triggers only on the rising edge of the clock. If `sync_reset` is high at the time of the clock edge, the output `q` is set to 0.
-![Alt Text]()
+![Alt Text]("week1/Day2/Day2_images/syncres.png")
 **Synthesis Commands:**
 
 ```bash
@@ -96,7 +129,8 @@ dfflibmap -liberty ~/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt
 abc -liberty ~/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 show
 ```
-![Alt Text]()
+![Alt Text]("week1/Day2/Day2_images/syncres_syn.png")
+![Alt Text]("week1/Day2/Day2_images/dff_syncres_show.png")
 **Note on Commands:**
 
   * `abc -liberty <.lib file path>`: This command is used for technology mapping of Yosys’s internal gate library to a target architecture.
@@ -110,7 +144,11 @@ show
 Optimization in synthesis refers to simplifying the RTL logic to make the design more efficient in terms of area, power, and timing.
 
 ### Synthesis of MULT2
-![Alt Text]()
+```verilog
+module mul2 (input [2:0] a, output [3:0] y);
+	assign y = a * 2;
+endmodule
+```
 **Commands:**
 
 ```bash
@@ -121,11 +159,16 @@ synth -top mult_2
 abc -liberty ~/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 write_verilog -noattr mult_2_net.v
 ```
-![Alt Text]()
+![Alt Text]("week1/Day2/Day2_images/mul2.png")
+![Alt Text]("week1/Day2/Day2_images/mul2_net.png")
 ### Part 2 - Synthesis of mult8
-![Alt Text]()
+```verilog
+module mult8 (input [2:0] a , output [5:0] y);
+	assign y = a * 9;
+endmodule
+```
 **Commands:**
-
+![Alt Text]("week1/Day2/Day2_images/mult8_syn.png)
 ```bash
 yosys
 read_liberty -lib ~/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
@@ -134,4 +177,7 @@ synth -top mult8
 abc -liberty ~/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 write_verilog -noattr mult_8_net.v
 ```
-![Alt Text]()
+![Alt Text]("week1/Day2/Day2_images/mult8.png)
+![Alt Text]("week1/Day2/Day2_images/mul8_net.png)
+
+
