@@ -99,24 +99,26 @@ opt_clean -purge
 ```
 
 ### Combinational Logic Optimization
-![Alt Text]()
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/813756f5b8c32456d99753547a01434bb9eb858b/week1/Day3/Day3_images/opt_check/Screenshot%20from%202025-09-26%2015-09-36.png)
 ```bash
 yosys
 read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-read_verilog opt_check1.v
-synth -top opt_check1
+read_verilog opt_check.v
+synth -top opt_check
 abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 opt_clean -purge
-write_verilog -noattr opt_check1.v
+write_verilog -noattr opt_check.v
 ```
-![Alt Text]()
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/813756f5b8c32456d99753547a01434bb9eb858b/week1/Day3/Day3_images/opt_check/Screenshot%20from%202025-09-26%2015-12-29.png)
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/813756f5b8c32456d99753547a01434bb9eb858b/week1/Day3/Day3_images/opt_check/Screenshot%20from%202025-09-26%2015-14-37.png)
 ### Multiple Module Optimization
-![Alt Text]()
-![Alt Text]()
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/813756f5b8c32456d99753547a01434bb9eb858b/week1/Day3/Day3_images/multi_module_opt/Screenshot%20from%202025-09-26%2016-02-39.png)
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/813756f5b8c32456d99753547a01434bb9eb858b/week1/Day3/Day3_images/multi_module_opt/Screenshot%20from%202025-09-26%2016-05-45.png)
 
 
 ### Sequential Logic Optimization
-![Alt Text]()
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/813756f5b8c32456d99753547a01434bb9eb858b/week1/Day3/Day3_images/dff_const/dff_c12_des.png)
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/813756f5b8c32456d99753547a01434bb9eb858b/week1/Day3/Day3_images/dff_const/dff_const1_sim.png)
 ```bash
 yosys
 read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
@@ -127,8 +129,9 @@ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 opt_clean -purge
 write_verilog -noattr dff_const1_net.v
 ```
-![Alt Text]()
-![Alt Text]()
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/813756f5b8c32456d99753547a01434bb9eb858b/week1/Day3/Day3_images/dff_const/dff_const1_syn.png)
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/813756f5b8c32456d99753547a01434bb9eb858b/week1/Day3/Day3_images/dff_const/dff_const1_show.png)
 ### Sequential Optimization for Unused Cells
-![Alt Text]()
-![Alt Text]()
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/813756f5b8c32456d99753547a01434bb9eb858b/week1/Day3/Day3_images/counter_opt.png)
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/813756f5b8c32456d99753547a01434bb9eb858b/week1/Day3/Day3_images/counter_opt_sim.png)![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/813756f5b8c32456d99753547a01434bb9eb858b/week1/Day3/Day3_images/counter_opt_syn.png)
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/813756f5b8c32456d99753547a01434bb9eb858b/week1/Day3/Day3_images/counter_opt_show.png)
