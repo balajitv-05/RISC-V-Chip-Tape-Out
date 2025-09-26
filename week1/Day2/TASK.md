@@ -63,7 +63,7 @@ endmodule
 ```
 
 This flip-flop captures the input `d` on the rising edge of the clock, unless the asynchronous reset is activated. In the `dff_asyncres` module, the asynchronous reset has higher priority than the clock. `async_reset` is checked first, so if it is high (1), it immediately resets `q` to 0.
-![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/8c1e116626392f981e4428e73b14b6ca8ce4a5af/week1/Day2/Day2_images/sim_dff_asyncres.png)
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/8c1e116626392f981e4428e73b14b6ca8ce4a5af/week1/Day2/Day2_images/asyncres.png)
 
 **Synthesis Commands:**
 
@@ -76,6 +76,7 @@ dfflibmap -liberty ~/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt
 abc -liberty ~/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 show
 ```
+![Alt Text](week1/Day2/Day2_images/async_res_syn.png)
 ![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/8c1e116626392f981e4428e73b14b6ca8ce4a5af/week1/Day2/Day2_images/asyncres_show.png)
 ### D Flip-Flop with Async Set
 ```verilog
