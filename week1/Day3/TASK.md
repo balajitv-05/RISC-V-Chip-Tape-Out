@@ -2,15 +2,15 @@
 
 ## What is Logic Optimization?
 
-Logic optimization in VLSI is the process of improving a digital circuit’s design to **minimize area, delay, and power consumption** while preserving its functionality. It is a crucial step in the synthesis phase of VLSI design, performed before the physical implementation. 🧠
+Logic optimization in VLSI is the process of improving a digital circuit’s design to **minimize area, delay, and power consumption** while preserving its functionality. It is a crucial step in the synthesis phase of VLSI design, performed before the physical implementation. 
 
 -----
 
 ## Objectives of Logic Optimization
 
   * **Minimize Area:** Reduce the number of gates and interconnections.
-  * **Minimize Delay:** Shorten the critical path to improve circuit speed. ⏱️
-  * **Minimize Power:** Reduce switching activity and overall capacitance. 🔋
+  * **Minimize Delay:** Shorten the critical path to improve circuit speed. 
+  * **Minimize Power:** Reduce switching activity and overall capacitance. 
   * **Improve Reliability:** Simplify the design to reduce glitches and hazards.
   * **Reduce Fabrication Cost:** Smaller circuits cost less and are easier to manufacture.
 
