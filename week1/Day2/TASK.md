@@ -76,7 +76,7 @@ dfflibmap -liberty ~/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt
 abc -liberty ~/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 show
 ```
-![Alt Text](week1/Day2/Day2_images/async_res_syn.png)
+![Alt Text]([week1/Day2/Day2_images/async_res_syn.png](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/59975edf3dfa69df128fca3c2165cbb6e1ba95be/week1/Day2/Day2_images/async_res_syn.png))
 ![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/8c1e116626392f981e4428e73b14b6ca8ce4a5af/week1/Day2/Day2_images/asyncres_show.png)
 ### D Flip-Flop with Async Set
 ```verilog
