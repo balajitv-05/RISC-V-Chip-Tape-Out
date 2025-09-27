@@ -64,7 +64,7 @@ gtkwave tb_file.vcd
 ```
 ### For iverilog based GLS
 #### Structure of GLS
-![Alt Text] (https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/384e092b2631756a562a9ea72c76212874a69bb6/week1/Day4/Day4_images/gls.png)
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/384e092b2631756a562a9ea72c76212874a69bb6/week1/Day4/Day4_images/gls.png)
 
 ```bash
 iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v file_net.v tb_file.v
@@ -99,7 +99,7 @@ endmodule
 #### For Synthesis
 ![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/384e092b2631756a562a9ea72c76212874a69bb6/week1/Day4/Day4_images/ternery_operator_syn.png)
 #### Synthesized Diagram
-![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/384e092b2631756a562a9ea72c76212874a69bb6/week1/Day4/Day4_images/ternery_operate_show.png)
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/384e092b2631756a562a9ea72c76212874a69bb6/week1/Day4/Day4_images/ternery_operator_show.png)
 
 #### After GLS
 ![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/384e092b2631756a562a9ea72c76212874a69bb6/week1/Day4/Day4_images/ternery_after_gls.png)
