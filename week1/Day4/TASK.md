@@ -4,7 +4,7 @@
 
 ## What is a Synthesis-Simulation Mismatch?
 
-A **Synthesis–Simulation Mismatch (SSM)** happens when the behavior of a digital circuit in pre-synthesis simulation (RTL simulation) does not match the behavior of the same circuit after it has been synthesized into a gate-level netlist. This is a critical issue because it means the verified RTL code does not represent the final hardware. ❌
+A **Synthesis–Simulation Mismatch (SSM)** happens when the behavior of a digital circuit in pre-synthesis simulation (RTL simulation) does not match the behavior of the same circuit after it has been synthesized into a gate-level netlist. This is a critical issue because it means the verified RTL code does not represent the final hardware. 
 
 -----
 
@@ -44,7 +44,7 @@ A **Synthesis–Simulation Mismatch (SSM)** happens when the behavior of a digit
 
 -----
 
-## How to Avoid SSM ✅
+## How to Avoid SSM 
 
   * Always write **synthesizable RTL code**.
   * Use a complete sensitivity list. In Verilog, `always @(*)` is recommended for combinational logic.
@@ -64,7 +64,8 @@ gtkwave tb_file.vcd
 ```
 ### For iverilog based GLS
 #### Structure of GLS
-![Alt Text] ()
+![Alt Text] (https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/384e092b2631756a562a9ea72c76212874a69bb6/week1/Day4/Day4_images/gls.png)
+
 ```bash
 iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v file_net.v tb_file.v
 ./a.out
@@ -94,11 +95,14 @@ endmodule
 ```
 
 #### Waveform before Synthesis
-![Alt Text] ()
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/384e092b2631756a562a9ea72c76212874a69bb6/week1/Day4/Day4_images/ternery_operate_mux_sim.png)
+#### For Synthesis
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/384e092b2631756a562a9ea72c76212874a69bb6/week1/Day4/Day4_images/ternery_operator_syn.png)
 #### Synthesized Diagram
-![Alt Text] ()
-#### Waveform after Synthesis
-![Alt Text] ()
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/384e092b2631756a562a9ea72c76212874a69bb6/week1/Day4/Day4_images/ternery_operate_show.png)
+
+#### After GLS
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/384e092b2631756a562a9ea72c76212874a69bb6/week1/Day4/Day4_images/ternery_after_gls.png)
 ### Example 2 - Bad Mux
 
 #### Verilog Code
@@ -116,34 +120,13 @@ endmodule
 ```
 
 #### Waveform before Synthesis
-![Alt Text] ()
-#### Synthesized Diagram
-![Alt Text] ()
-#### Waveform after Synthesis
-![Alt Text] ()
-### Example 3 - Good Mux
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/384e092b2631756a562a9ea72c76212874a69bb6/week1/Day4/Day4_images/bad_mux_sim.png)
+#### For Synthesis
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/384e092b2631756a562a9ea72c76212874a69bb6/week1/Day4/Day4_images/bad_mux_syn.png)
+#### After GLS Waveform
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/384e092b2631756a562a9ea72c76212874a69bb6/week1/Day4/Day4_images/bad_mux_gls.png)
 
-#### Verilog Code
-
-```verilog
-module good_mux (input i0 , input i1 , input sel , output reg y);
-always @ (*)
-begin
-	if(sel)
-		y <= i1;
-	else 
-		y <= i0;
-end
-endmodule
-```
-
-#### Waveform before Synthesis
-![Alt Text] ()
-#### Synthesized Diagram
-![Alt Text] ()
-#### Waveform after Synthesis
-![Alt Text] ()
-### Example 4 - Blocking Caveat
+### Example 3 - Blocking Caveat
 
 #### Verilog Code
 
@@ -159,8 +142,11 @@ endmodule
 ```
 
 #### Waveform before Synthesis
-![Alt Text] ()
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/384e092b2631756a562a9ea72c76212874a69bb6/week1/Day4/Day4_images/bloxking_sim.png)
+#### For Synthesis
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/384e092b2631756a562a9ea72c76212874a69bb6/week1/Day4/Day4_images/blocking_syn.png)
 #### Synthesized Diagram
-![Alt Text] ()
-#### Waveform after Synthesis
-![Alt Text] ()
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/384e092b2631756a562a9ea72c76212874a69bb6/week1/Day4/Day4_images/blocking_show.png)
+
+#### After GLS Waveform
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/384e092b2631756a562a9ea72c76212874a69bb6/week1/Day4/Day4_images/blocking_gls.png)
