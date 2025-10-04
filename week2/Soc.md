@@ -34,7 +34,7 @@ Common components integrated into an SoC include:
 4.  **Lower Cost (at Volume):** While the initial design is complex, mass production often makes the integrated SoC cheaper than assembling all the equivalent discrete components.
 5.  **Improved Performance:** Components communicating over very short, high-speed internal connections (instead of slower external buses) leads to faster data transfer and better overall performance.
 
-#BabySoC
+# BabySoC
 
 ---
 
