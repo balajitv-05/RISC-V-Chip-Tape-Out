@@ -240,7 +240,7 @@ display
 📈**plot the waveforms in ngspice**
 
 ```shell
-ngspice day5_inv_supplyvariation_Wp1_Wn036.spice
+ngspice day5_inv_devicevariation_Wp1_Wn036.spice
 plot out vs in
 ```
 
