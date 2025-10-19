@@ -154,4 +154,6 @@ In the interactive **ngspice VTC plot**, you can manually extract values for Noi
 
 ✅ **Noise Margin Low (NML)**:  
 `NML = VIL − VOL = x0 − y1`
+
+### NOISE MARGIN CALCULATION:  
 <img width="872" height="757" alt="day4_noiseMargin" src="https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/6af8c7e2a98ce1ce8db19e8d0ca014a8bd84966b/week4/images/day4_noiseMargin.png" />
