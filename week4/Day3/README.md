@@ -102,7 +102,7 @@ plot out vs in
 
 Below image shows the Voltage Transfer Characteristics (VTC) of a CMOS Inverter:
 
-<img width="764" height="589" alt="Screenshot 2025-10-18 165114" src="https://github.com/user-attachments/assets/441b4d50-1b61-4e28-a563-3f06c11a1f3d" />
+<img width="764" height="589" alt="day3_inv_vtc" src="https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/9d4585475a627622124399a8608cbda1788f4b67/week4/images/day3_inv_vtc.png" />
 
 
 <details> <summary><strong>day3_inv_tran_Wp084_Wn036.spice </strong></summary>
@@ -154,7 +154,7 @@ Below image shows the output waveform of transient analysis of a CMOS inverter, 
 - Output **rise time delay** = Time at 50% of rising edge − Time at 50% of falling edge  
 - Output **fall time delay** = Time at 50% of falling edge − Time at 50% of rising edge  
 
-<img width="884" height="562" alt="Screenshot 2025-10-18 165320" src="https://github.com/user-attachments/assets/7c4e3c71-812d-4992-ae5e-4a585f9e07dd" />
+<img width="884" height="562" alt="day3_inv" src="https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/9d4585475a627622124399a8608cbda1788f4b67/week4/images/day3_inv.png" />
 
 <a name="comparison-vtc-vs-tran"></a>
 
