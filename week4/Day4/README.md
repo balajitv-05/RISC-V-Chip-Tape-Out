@@ -136,7 +136,7 @@ plot out vs in
 
 Below image is the waveform of VTC curve to get the Noise Margin:
 
-<img width="872" height="757" alt="Screenshot 2025-10-18 203323" src="https://github.com/user-attachments/assets/cce05472-6390-4593-809c-12e920a66c52" />
+<img width="872" height="757" alt="day4_nm" src="https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/6af8c7e2a98ce1ce8db19e8d0ca014a8bd84966b/week4/images/day4_nm.png" />
 
 >🤔 **How to Calculate Noise Margin from SPICE VTC Plot ??**
 
@@ -154,3 +154,4 @@ In the interactive **ngspice VTC plot**, you can manually extract values for Noi
 
 ✅ **Noise Margin Low (NML)**:  
 `NML = VIL − VOL = x0 − y1`
+<img width="872" height="757" alt="day4_noiseMargin" src="https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/6af8c7e2a98ce1ce8db19e8d0ca014a8bd84966b/week4/images/day4_noiseMargin.png" />
