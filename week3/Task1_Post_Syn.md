@@ -28,7 +28,7 @@ Here is the step-by-step execution plan for running the  commands manually:
 yosys
 ```
 
-//
+
 
 Inside the Yosys shell, run:
 ```yosys
@@ -36,7 +36,7 @@ read_verilog ./src/module/vsdbabysoc.v
 read_verilog -I ./src/include /home/ananya123/VSDBabySoCC/src/module/rvmyth.v
 
 ```
-//
+
 ---
 
 ### **Step 2: Load the Liberty Files for Synthesis**
@@ -46,21 +46,26 @@ read_liberty -lib ./src/lib/avsdpll.lib
 read_liberty -lib ./src/lib/avsddac.lib
 read_liberty -lib ./src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ```
-//
+
 ---
 
 ### **Step 3: Run Synthesis Targeting `vsdbabysoc`**
 ```yosys
 synth -top vsdbabysoc
 ```
-//
+
+![Alt Text] (https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/7f0dcb2ec3e1d4777e0220876108290574292c8b/week3/images/statistics_synth.png)
+![Alt Text] (https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/7f0dcb2ec3e1d4777e0220876108290574292c8b/week3/images/statistics_synth1.png)
+
 ---
 
 ### **Step 4: Map D Flip-Flops to Standard Cells**
 ```yosys
 dfflibmap -liberty ./src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ```
-//
+
+![Alt Text] (https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/7f0dcb2ec3e1d4777e0220876108290574292c8b/week3/images/dfflibmap.png)
+
 ---
 
 ### **Step 5: Perform Optimization and Technology Mapping**
@@ -68,7 +73,10 @@ dfflibmap -liberty ./src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 opt
 abc -liberty  ./src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib -script +strash;scorr;ifraig;retime;{D};strash;dch,-f;map,-M,1,{D}
 ```
-//
+
+![Alt Text] (https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/7f0dcb2ec3e1d4777e0220876108290574292c8b/week3/images/opt.png)
+![Alt Text] (https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/7f0dcb2ec3e1d4777e0220876108290574292c8b/week3/images/statistics_synth1.png)
+
 ---
 
 ### **Step 6: Perform Final Clean-Up and Renaming**
@@ -78,21 +86,27 @@ setundef -zero
 clean -purge
 rename -enumerate
 ```
-//
+
+![Alt Text] (https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/7f0dcb2ec3e1d4777e0220876108290574292c8b/week3/images/flatten.png)
+![Alt Text] (https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/7f0dcb2ec3e1d4777e0220876108290574292c8b/week3/images/setundef.png)
+
+
 ---
 
 ### **Step 7: Check Statistics**
 ```yosys
 stat
 ```
-//
+
+![Alt Text] (https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/7f0dcb2ec3e1d4777e0220876108290574292c8b/week3/images/stat.png)
+
 ---
 
 ### **Step 8: Write the Synthesized Netlist**
 ```yosys
 write_verilog -noattr vsdbabysoc.synth.v
 ```
-//
+
 ---
 
 ## POST_SYNTHESIS SIMULATION AND WAVEFORMS
@@ -120,4 +134,7 @@ cd output/post_synth_sim/
 ```bash
 gtkwave post_synth_sim.vcd
 ```
+
+![Alt Text] (https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/7f0dcb2ec3e1d4777e0220876108290574292c8b/week3/images/simulationGLS.png)
+
 ---
