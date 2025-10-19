@@ -54,8 +54,9 @@ read_liberty -lib ./src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 synth -top vsdbabysoc
 ```
 
-![Alt Text] (https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/7f0dcb2ec3e1d4777e0220876108290574292c8b/week3/images/statistics_synth.png)
-![Alt Text] (https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/7f0dcb2ec3e1d4777e0220876108290574292c8b/week3/images/statistics_synth1.png)
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/7f0dcb2ec3e1d4777e0220876108290574292c8b/week3/images/statistics_synth.png)
+
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/7f0dcb2ec3e1d4777e0220876108290574292c8b/week3/images/statistics_synth1.png)
 
 ---
 
@@ -64,7 +65,7 @@ synth -top vsdbabysoc
 dfflibmap -liberty ./src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ```
 
-![Alt Text] (https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/7f0dcb2ec3e1d4777e0220876108290574292c8b/week3/images/dfflibmap.png)
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/7f0dcb2ec3e1d4777e0220876108290574292c8b/week3/images/dfflibmap.png)
 
 ---
 
@@ -74,8 +75,9 @@ opt
 abc -liberty  ./src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib -script +strash;scorr;ifraig;retime;{D};strash;dch,-f;map,-M,1,{D}
 ```
 
-![Alt Text] (https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/7f0dcb2ec3e1d4777e0220876108290574292c8b/week3/images/opt.png)
-![Alt Text] (https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/7f0dcb2ec3e1d4777e0220876108290574292c8b/week3/images/statistics_synth1.png)
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/7f0dcb2ec3e1d4777e0220876108290574292c8b/week3/images/opt.png)
+
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/7f0dcb2ec3e1d4777e0220876108290574292c8b/week3/images/statistics_synth1.png)
 
 ---
 
@@ -87,8 +89,9 @@ clean -purge
 rename -enumerate
 ```
 
-![Alt Text] (https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/7f0dcb2ec3e1d4777e0220876108290574292c8b/week3/images/flatten.png)
-![Alt Text] (https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/7f0dcb2ec3e1d4777e0220876108290574292c8b/week3/images/setundef.png)
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/7f0dcb2ec3e1d4777e0220876108290574292c8b/week3/images/flatten.png)
+
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/7f0dcb2ec3e1d4777e0220876108290574292c8b/week3/images/setundef.png)
 
 
 ---
@@ -98,7 +101,7 @@ rename -enumerate
 stat
 ```
 
-![Alt Text] (https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/7f0dcb2ec3e1d4777e0220876108290574292c8b/week3/images/stat.png)
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/7f0dcb2ec3e1d4777e0220876108290574292c8b/week3/images/stat.png)
 
 ---
 
@@ -135,6 +138,6 @@ cd output/post_synth_sim/
 gtkwave post_synth_sim.vcd
 ```
 
-![Alt Text] (https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/7f0dcb2ec3e1d4777e0220876108290574292c8b/week3/images/simulationGLS.png)
+![Alt Text](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/7f0dcb2ec3e1d4777e0220876108290574292c8b/week3/images/simulationGLS.png)
 
 ---
