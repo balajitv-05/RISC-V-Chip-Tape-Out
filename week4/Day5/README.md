@@ -100,7 +100,7 @@ ngspice day5_inv_supplyvariation_Wp1_Wn036.spice
 
 Below image is waveform for different supplies:
 
-<img width="882" height="751" alt="Screenshot 2025-10-18 210019" src="https://github.com/user-attachments/assets/9583281d-e45b-4e13-a56d-66c4339615fe" />
+<img width="882" height="751" alt="day5_supplyVariation" src="https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/a01533befae8c3029e6284d56b42af7ae3cf11b4/week4/images/day5_supplyVariation.png" />
 
 🤔**How to Calculate Gain from SPICE VTC Plot??**
 
@@ -246,6 +246,6 @@ plot out vs in
 
 Below image is output waveform of device variation:
 
-<img width="885" height="755" alt="Screenshot 2025-10-18 222430" src="https://github.com/user-attachments/assets/c379786b-d4fd-4df2-a373-4acc54668b95" />
+<img width="885" height="755" alt="day5_device_variation" src="https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/a01533befae8c3029e6284d56b42af7ae3cf11b4/week4/images/day5_device_variation.png" />
 
 As the **PMOS width** is larger than the **NMOS width**, the PMOS provides a stronger pull-up path — causing the output to stay high for a longer duration when compared to the NMOS curve.
