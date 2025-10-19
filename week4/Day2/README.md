@@ -138,7 +138,7 @@ plot -vdd#branch
 
 **The plot of Ids vs Vds over constant Vgs:**
 
-<img width="954" height="591" alt="Screenshot 2025-10-17 222358" src="https://github.com/user-attachments/assets/9e778415-04bf-4279-8715-91612963c534" />
+<img width="954" height="591" alt="day2_1idsvsvds" src="https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/9d4585475a627622124399a8608cbda1788f4b67/week4/images/day2_1idsvsvds.png" />
 
  <details> <summary><strong>day2_nfet_idvgs_L015_W039.spice </strong></summary>
 
@@ -178,7 +178,7 @@ plot -vdd#branch
 
 **The plot of Ids vs Vgs over constant Vds:**
 
-<img width="954" height="622" alt="Screenshot 2025-10-17 222738" src="https://github.com/user-attachments/assets/80c3ae45-cc2a-4287-8ec0-f006b1896d75" />
+<img width="954" height="622" alt="day2_1idsvsvgs" src="https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/9d4585475a627622124399a8608cbda1788f4b67/week4/images/day2_1idsvsvgs.png" />
 
 
 ### `CMOS voltage Transfer Characteristics`
