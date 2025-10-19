@@ -138,7 +138,7 @@ plot -vdd#branch
 
 **The plot of Ids vs Vds over constant Vgs:**
 
-<img width="954" height="591" alt="day2_1idsvsvds" src="https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/9d4585475a627622124399a8608cbda1788f4b67/week4/images/day2_1idsvsvds.png" />
+<img width="954" height="591" alt="day2_1idsvsvds" src="https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/9d4585475a627622124399a8608cbda1788f4b67/week4/images/day2_idsvsvds.png" />
 
  <details> <summary><strong>day2_nfet_idvgs_L015_W039.spice </strong></summary>
 
