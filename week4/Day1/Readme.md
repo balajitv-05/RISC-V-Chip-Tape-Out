@@ -471,4 +471,4 @@ plot -vdd#branch
 
 **Id vs Vds for different Vgs - sky130 NMOS (W=5um, L=2um)**
 
-<img width="874" height="531" alt="Screenshot 2025-10-17 161506" src="https://github.com/user-attachments/assets/e4dde663-5194-4741-895b-ec4b63d4f8c3" />
+<img width="874" height="531" alt="day1_idsvsvds" src="https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/990895b92c3df9622a77ad5bfe9edfcca31c80b2/week4/images/day1_idsvsvds.png" />
