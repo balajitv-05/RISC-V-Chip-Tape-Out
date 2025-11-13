@@ -191,7 +191,7 @@ Execute the floorplan stage:
 
 **Location:** `$OPENLANE_ROOT/configuration/floorplan.tcl`
 
-![Default Floorplan Config](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/5d19eaa8f84c22568f7db480d648dc6b7caf204b/week6/Day2/day2_images\floorplan_config.png)
+![Default Floorplan Config](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/5d19eaa8f84c22568f7db480d648dc6b7caf204b/week6/Day2/day2_images/floorplan_config.png)
 
 **File Contents:**
 
@@ -207,7 +207,7 @@ Execute the floorplan stage:
 
 **Location:** `logs/floorplan/4-io.log`
 
-![IO Placer Log](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/5d19eaa8f84c22568f7db480d648dc6b7caf204b/week6/Day2/day2_images\floorplan_io_log.png)
+![IO Placer Log](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/5d19eaa8f84c22568f7db480d648dc6b7caf204b/week6/Day2/day2_images/floorplan_io_log.png)
 
 **Information Provided:**
 
@@ -230,7 +230,7 @@ Execute the floorplan stage:
 
 **Location:** `results/floorplan/picorv32a.def`
 
-![DEF File](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/5d19eaa8f84c22568f7db480d648dc6b7caf204b/week6/Day2/day2_images\floorplan_def.png)
+![DEF File](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/5d19eaa8f84c22568f7db480d648dc6b7caf204b/week6/Day2/day2_images/floorplan_def.png)
 
 **Key Information:**
 
@@ -353,7 +353,7 @@ def read picorv32.def &
 
 #### Detailed Cell Inspection (`what` command)
 
-![MAGIC What View](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/5d19eaa8f84c22568f7db480d648dc6b7caf204b/week6/Day2/day2_images\floorplan_tkcon.png)
+![MAGIC What View](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/5d19eaa8f84c22568f7db480d648dc6b7caf204b/week6/Day2/day2_images/floorplan_tkcon.png)
 
 **Procedure:**
 
