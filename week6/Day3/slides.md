@@ -19,7 +19,7 @@ paginate: true
 
 --- 
 
-![bg fit](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/16a1b916d87eedad847f679b0a531d75bf623233/week6/Day3/assets/mask1/mask1_3.png)
+![bg fit](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/3723353179030e8b28057e295c14712824744217/week6/Day3/assets/mask1/mask1_3%20(2).png)
 
 ---
 
