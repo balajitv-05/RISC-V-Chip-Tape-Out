@@ -108,6 +108,36 @@ We begin with a P-type substrate. The first step is to define the "active region
 5.  **Oxidation:** The wafer is placed in a high-temperature oxidation furnace. A thick "field oxide" (~500-1000nm) grows in the areas where the $Si_3N_4$ was removed. The $Si_3N_4$ layer blocks oxygen, preventing the "active regions" from oxidizing. This process is **LOCOS**.
 6.  **Strip:** Finally, the $Si_3N_4$ mask layer is stripped off using hot phosphoric acid.
 
+--- 
+
+marp: true 
+
+theme: default 
+
+paginate: true
+
+ --- 
+# Mask 1
+ ---
+ ![bg fit]((https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/16a1b916d87eedad847f679b0a531d75bf623233/week6/Day3/assets/mask1/mask1_1.png))
+ --- 
+![bg fit](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/16a1b916d87eedad847f679b0a531d75bf623233/week6/Day3/assets/mask1/mask1_2.png)
+ --- 
+![bg fit](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/16a1b916d87eedad847f679b0a531d75bf623233/week6/Day3/assets/mask1/mask1_3.png)
+ ---
+ ![bg fit](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/16a1b916d87eedad847f679b0a531d75bf623233/week6/Day3/assets/mask1/mask1_4.png) 
+---
+ ![bg fit](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/16a1b916d87eedad847f679b0a531d75bf623233/week6/Day3/assets/mask1/mask1_5.png) 
+---
+ ![bg fit](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/16a1b916d87eedad847f679b0a531d75bf623233/week6/Day3/assets/mask1/mask1_6.png) 
+---  
+![bg fit](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/16a1b916d87eedad847f679b0a531d75bf623233/week6/Day3/assets/mask1/mask1_8.png)  
+---  
+![bg fit](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/16a1b916d87eedad847f679b0a531d75bf623233/week6/Day3/assets/mask1/mask1_f.png)
+ --- 
+
+
+
 > **Note on "Bird's Beak":** A known side effect of LOCOS is the "Bird's beak." This is where the growing oxide diffuses laterally under the edge of the $Si_3N_4$ mask, creating a tapered edge. This feature consumes valuable active area and is a primary reason why modern processes (< 0.25um) use Shallow Trench Isolation (STI).
 
 ---
