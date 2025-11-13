@@ -8,63 +8,62 @@ This document details the step-by-step fabrication of a CMOS (Complementary Meta
 
 ## 16-Mask CMOS Fabrication Flowchart
 
-```mermaid
-graph TD;
-    subgraph "A. Wafer & Well Prep"
-        Start(P-Substrate) --> M1[Mask 1: Define Active Region];
-        M1 --> P1_Etch[Process: Etch SiN];
-        P1_Etch --> P2_LOCOS[Process: LOCOS Isolation];
-        P2_LOCOS --> P3_Strip[Process: Strip SiN];
-        P3_Strip --> M2[Mask 2: P-Well Implant];
-        M2 --> M3[Mask 3: N-Well Implant];
-        M3 --> P4_DriveIn[Process: Well Drive-in Diffusion];
-    end
+```markdown
+# 16-Mask CMOS Fabrication Flow (Text-Based)
 
-    subgraph "B. Transistor Formation"
-        P4_DriveIn --> M4[Mask 4: NMOS Vt Adjust Implant];
-        M4 --> M5[Mask 5: PMOS Vt Adjust Implant];
-        M5 --> P5_OxStrip[Process: Strip Oxide];
-        P5_OxStrip --> P6_GateOx[Process: Grow High-Quality Gate Oxide];
-        P6_GateOx --> P7_PolyDep[Process: Deposit Polysilicon];
-        P7_PolyDep --> M6[Mask 6: Pattern Polysilicon Gate];
-        M6 --> P8_PolyEtch[Process: Etch Polysilicon];
-        P8_PolyEtch --> M7[Mask 7: NMOS LDD Implant (N-)];
-        M7 --> M8[Mask 8: PMOS LDD Implant (P-)];
-        M8 --> P9_Spacer[Process (No Mask): Form Side-wall Spacers];
-        P9_Spacer --> M9[Mask 9: NMOS S/D Implant (N+)];
-        M9 --> M10[Mask 10: PMOS S/D Implant (P+)];
-        M10 --> P10_Anneal[Process: S/D Anneal];
-    end
+**START: P-Type Substrate**
+> **A. Wafer & Well Prep**
+> 1.  **Mask 1: Define Active Region**
+>     * `Process:` Etch $Si_3N_4$ (Silicon Nitride)
+>     * `Process:` Grow Field Oxide (LOCOS Isolation)
+>     * `Process:` Strip $Si_3N_4$
+> 2.  **Mask 2: P-Well Implant (Boron)**
+> 3.  **Mask 3: N-Well Implant (Phosphorous)**
+>     * `Process:` Well Drive-in Diffusion (Furnace)
+>
+> **B. Transistor Formation**
+> 4.  **Mask 4: NMOS $V_t$ Adjust Implant**
+> 5.  **Mask 5: PMOS $V_t$ Adjust Implant**
+>     * `Process:` Strip existing oxide
+>     * `Process:` Grow new High-Quality Gate Oxide
+>     * `Process:` Deposit Polysilicon
+> 6.  **Mask 6: Pattern Polysilicon Gate**
+>     * `Process:` Etch Polysilicon
+> 7.  **Mask 7: NMOS LDD Implant (N-)**
+> 8.  **Mask 8: PMOS LDD Implant (P-)**
+>     * `Process (No Mask):` Form Side-wall Spacers
+> 9.  **Mask 9: NMOS Source/Drain Implant (N+)**
+> 10. **Mask 10: PMOS Source/Drain Implant (P+)**
+>     * `Process:` Source/Drain Anneal (Furnace)
+>
+> **C. Contact & Metal Layer 1**
+>     * `Process (No Mask):` Salicide ($TiSi_2$) Formation
+> 11. **Mask 11: Pattern TiN Local Interconnect**
+>     * `Process:` Deposit Insulator (BPSG)
+>     * `Process (No Mask):` CMP (Planarization)
+> 12. **Mask 12: Etch Contact Holes**
+>     * `Process:` Deposit Tungsten
+>     * `Process (No Mask):` CMP for Tungsten Plugs
+>     * `Process:` Deposit Metal 1 (Aluminum)
+> 13. **Mask 13: Pattern Metal 1**
+>     * `Process:` Etch Metal 1
+>
+> **D. Interconnect Stack**
+>     * `Process:` Deposit Dielectric ($SiO_2$)
+>     * `Process (No Mask):` CMP (Planarization)
+> 14. **Mask 14: Etch Via 1 Holes**
+>     * `Process:` Deposit Tungsten
+>     * `Process (No Mask):` CMP for Via 1 Plugs
+>     * `Process:` Deposit Metal 2 (Aluminum)
+> 15. **Mask 15: Pattern Metal 2**
+>     * `Process:` Etch Metal 2
+>
+> **E. Final Steps**
+>     * `Process:` Deposit Passivation Layer ($Si_3N_4$)
+> 16. **Mask 16: Open Bond Pads**
 
-    subgraph "C. Contact & Metal Layer 1"
-        P10_Anneal --> P11_Salicide[Process (No Mask): Salicide (TiSi2) Formation];
-        P11_Salicide --> M11[Mask 11: Pattern TiN Local Interconnect];
-        M11 --> P12_BPSG[Process: Deposit Insulator (BPSG)];
-        P12_BPSG --> P13_CMP1[Process (No Mask): CMP Planarization];
-        P13_CMP1 --> M12[Mask 12: Etch Contact Holes];
-        M12 --> P14_WPlug[Process: Deposit & CMP Tungsten Plugs];
-        P14_WPlug --> P15_M1Dep[Process: Deposit Metal 1 (Al)];
-        P15_M1Dep --> M13[Mask 13: Pattern Metal 1];
-        M13 --> P16_M1Etch[Process: Etch Metal 1];
-    end
-
-    subgraph "D. Interconnect Stack"
-        P16_M1Etch --> P17_IMD[Process: Deposit Dielectric (SiO2)];
-        P17_IMD --> P18_CMP2[Process (No Mask): CMP Planarization];
-        P18_CMP2 --> M14[Mask 14: Etch Via 1 Holes];
-        M14 --> P19_V1Plug[Process: Deposit & CMP Via 1 Plugs];
-        P19_V1Plug --> P20_M2Dep[Process: Deposit Metal 2 (Al)];
-        P20_M2Dep --> M15[Mask 15: Pattern Metal 2];
-        M15 --> P21_M2Etch[Process: Etch Metal 2];
-    end
-
-    subgraph "E. Final Steps"
-        P21_M2Etch --> P22_Passivation[Process: Deposit Passivation Layer (SiN)];
-        P22_Passivation --> M16[Mask 16: Open Bond Pads];
-        M16 --> End(Fabrication Complete);
-    end 
- ```   
-
+**END: Fabrication Complete**
+```
 ## Core Concepts in Fabrication
 
 Before detailing the mask steps, here are two foundational processes used repeatedly.
