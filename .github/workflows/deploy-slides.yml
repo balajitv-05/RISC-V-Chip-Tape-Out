@@ -27,7 +27,7 @@ jobs:
       - name: Build slides
         run: | 
               mkdir -p dist 
-              marp --html week6/Day3/cmos_fab.md -o dist/output.html
+              marp --html week6/Day3/cmos_fab.md -o dist/index.html
        
           # Tell Marp to build the file into a 'dist' folder
           # If your file is not named index.md or slides.md, change it here
