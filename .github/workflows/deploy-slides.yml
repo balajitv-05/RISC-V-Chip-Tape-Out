@@ -25,7 +25,7 @@ jobs:
       - name: Install Marp CLI
         run: npm install -g @marp-team/marp-cli
       - name: Build slides
-        run: marp week6/Day3/cmos_fab.md -o output.html --html
+        run: mkdir -p dist marp week6/Day3/cmos_fab.md -o output.html --html
        
           # Tell Marp to build the file into a 'dist' folder
           # If your file is not named index.md or slides.md, change it here
