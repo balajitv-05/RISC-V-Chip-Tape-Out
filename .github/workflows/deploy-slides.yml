@@ -22,12 +22,15 @@ jobs:
 
       # 2. Build the Marp slides into a 'dist' folder
       #    It looks for a file named 'index.md' or 'slides.md'
-      - name: Build slides with Marp
-        uses: marp-team/marp-cli-action@v3
-        with:
+      - name: Install Marp CLI
+        run: npm install -g @marp-team/marp-cli
+
+      - name: Convert slides
+        run: marp cmos_fab.md -o slide.html
+       
           # Tell Marp to build the file into a 'dist' folder
           # If your file is not named index.md or slides.md, change it here
-          args: "slides.md --html -o dist"
+          #args: "cmos_fab.md --html -o dist"
         env:
           # This enables HTML (like <iframe>) in your slides
           MARP_HTML: "1"
