@@ -103,7 +103,7 @@ Optimal Floorplan Target = {Utilization: 50-70%, Aspect Ratio: 0.8-1.2, Minimal 
 | **⚖️ `FP_SIZING`** | Sizing mode for die/core | `"relative"` | `absolute` may conflict with utilization |
 | **📐 `DIE_AREA`** | Absolute die boundary coordinates | `"0 0 1000 1000"` | Used only with absolute sizing mode |
 
-![Floorplan Configuration](day2_images\floorplan_char.png)
+![Floorplan Configuration](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/5d19eaa8f84c22568f7db480d648dc6b7caf204b/week6/Day2/day2_images/floorplan_char.png)
 
 #### I/O Configuration
 
@@ -164,7 +164,7 @@ Execute the floorplan stage:
 ```tcl
 % run_floorplan
 ```
-![Floorplan Execution](day2_images\floorplan_run.png)
+![Floorplan Execution](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/5d19eaa8f84c22568f7db480d648dc6b7caf204b/week6/Day2/day2_images/floorplan_run.png)
 
 **Process Breakdown:**
 
@@ -191,7 +191,7 @@ Execute the floorplan stage:
 
 **Location:** `$OPENLANE_ROOT/configuration/floorplan.tcl`
 
-![Default Floorplan Config](day2_images\floorplan_config.png)
+![Default Floorplan Config](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/5d19eaa8f84c22568f7db480d648dc6b7caf204b/week6/Day2/day2_images\floorplan_config.png)
 
 **File Contents:**
 
@@ -207,7 +207,7 @@ Execute the floorplan stage:
 
 **Location:** `logs/floorplan/4-io.log`
 
-![IO Placer Log](day2_images\floorplan_io_log.png)
+![IO Placer Log](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/5d19eaa8f84c22568f7db480d648dc6b7caf204b/week6/Day2/day2_images\floorplan_io_log.png)
 
 **Information Provided:**
 
@@ -230,7 +230,7 @@ Execute the floorplan stage:
 
 **Location:** `results/floorplan/picorv32a.def`
 
-![DEF File](day2_images\floorplan_def.png)
+![DEF File](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/5d19eaa8f84c22568f7db480d648dc6b7caf204b/week6/Day2/day2_images\floorplan_def.png)
 
 **Key Information:**
 
@@ -298,7 +298,7 @@ def read picorv32.def &
 
 #### Full Chip View Analysis
 
-![MAGIC Full View](day2_images/floorplan_magic.png)
+![MAGIC Full View](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/5d19eaa8f84c22568f7db480d648dc6b7caf204b/week6/Day2/day2_images/floorplan_magic.png)
 **Key Visual Elements:**
 
 | Color/Element | Represents | Significance |
@@ -353,7 +353,7 @@ def read picorv32.def &
 
 #### Detailed Cell Inspection (`what` command)
 
-![MAGIC What View](day2_images\floorplan_tkcon.png)
+![MAGIC What View](https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/blob/5d19eaa8f84c22568f7db480d648dc6b7caf204b/week6/Day2/day2_images\floorplan_tkcon.png)
 
 **Procedure:**
 
