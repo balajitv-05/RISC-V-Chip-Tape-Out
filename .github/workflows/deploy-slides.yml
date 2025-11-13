@@ -34,7 +34,20 @@ jobs:
           #args: "cmos_fab.md --html -o dist"
         env:
           # This enables HTML (like <iframe>) in your slides
-          MARP_HTML: "1"
+            MARP_HTML: "1"
+
+      - name: Copy assets folder to dist
+        run: |
+                # Check if the 'assets' directory exists before copying
+                if [ -d "assets" ]; then
+                  echo "Copying assets folder..."
+                  # Create the 'assets' directory inside 'dist'
+                  mkdir -p dist/assets
+                  # Copy all files from your 'assets' folder into 'dist/assets'
+                  cp -r assets/mask1/* dist/assets/
+                else
+                  echo "No 'assets' directory found. Skipping copy."
+                fi
 
       # 3. Upload the 'dist' folder as an artifact
       - name: Upload artifact
