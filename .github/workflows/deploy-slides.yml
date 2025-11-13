@@ -24,9 +24,8 @@ jobs:
       #    It looks for a file named 'index.md' or 'slides.md'
       - name: Install Marp CLI
         run: npm install -g @marp-team/marp-cli
-
-      - name: Convert slides
-        run: marp cmos_fab.md -o slide.html
+      - name: Build slides
+        run: marp https://github.com/balajitv-05/RISC-V-Chip-Tape-Out/tree/2bd512a120118503a1b6eaf1fe758de23af8b062/week6/Day3/cmos_fab.md -o output.html --html
        
           # Tell Marp to build the file into a 'dist' folder
           # If your file is not named index.md or slides.md, change it here
